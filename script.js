@@ -1,12 +1,16 @@
 const canvas = document.getElementById('scratchCanvas');
 const ctx = canvas.getContext('2d');
 
-// Initial eraser size (default 20px)
-let eraserSize = 20;
+// Initial eraser size (default set to 7px)
+let eraserSize = 7;
 
 // Get the slider element and the span to display the value
 const eraserSlider = document.getElementById('eraserSize');
 const sizeValueDisplay = document.getElementById('sizeValue');
+
+// Set the default value of the slider to match the initial eraser size
+eraserSlider.value = eraserSize;
+sizeValueDisplay.textContent = eraserSize; // Update the displayed size value
 
 // Update the eraser size whenever the slider value changes
 eraserSlider.addEventListener('input', (e) => {
@@ -30,7 +34,7 @@ function drawRainbowBackground() {
 
 // Cover the canvas with a black rectangle (simulating the scratch layer)
 function coverWithBlack() {
-  ctx.globalCompositeOperation = 'source-over'; // Reset the composite mode
+  ctx.globalCompositeOperation = 'source-over'; // Reset the composite mode to default
   ctx.fillStyle = '#000'; // Black color
   ctx.fillRect(0, 0, canvas.width, canvas.height); // Fill the entire canvas with black
 }
@@ -57,7 +61,8 @@ function scratch(e) {
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  ctx.globalCompositeOperation = 'destination-out'; // Set to erase the drawing
+  // Set the composite operation to erase (remove black layer)
+  ctx.globalCompositeOperation = 'destination-out'; 
   ctx.beginPath();
   ctx.arc(x, y, eraserSize, 0, Math.PI * 2); // Erase with a circular path based on eraser size
   ctx.fill();
