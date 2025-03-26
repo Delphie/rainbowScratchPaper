@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Scratch Paper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Rainbow Scratch Paper</h1>
+  <canvas id="scratchCanvas" width="600" height="400"></canvas>
+  
+  <div id="controls">
+    <button onclick="resetCanvas()">Reset</button>
+    <div>
+      <label for="eraserSize">Eraser Size:</label>
+      <input type="range" id="eraserSize" min="10" max="50" value="20" step="1">
+      <span id="sizeValue">20</span> px
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
