@@ -3,47 +3,67 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 30px;
-  background-color: #f4f4f4;
-  color: #333;
-}
+  /*background-image: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8F00FF);
+  background-size: 100% 100%;
+  background-attachment: fixed; 
+  /* Add a fallback gradient background in case JavaScript is not enabled or fails to load */
+ /* Optional, keeps the background fixed when scrolling */
 
-/* Styling the title (h1) */
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
 }
-
-/* Canvas styling */
+h1{
+  font-size:40px;
 canvas {
   border: 2px solid #000;
   cursor: crosshair;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding some shadow for a clean look */
-  margin-bottom: 20px;
+   background-image: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8F00FF);
+  background-size: 100% 100%;
+  background-attachment: fixed; 
 }
 
-/* Controls section styling */
 #controls {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-/* Button styling */
 button {
   padding: 10px 20px;
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
-/* Button hover effect */
 button:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #45a049;
+}
+ background-image: linear-gradient(to right,transparent, transparent,transparent,transparent, violet, indigo, blue, green, yellow, orange, red, transparent,transparent,transparent, transparent, transparent);   -webkit-background-clip: text;
+  color: transparent;
+
 }
 
-/* Button active effect */
-button:active {
-  background-color: #3e8e41; /* Even darker green when clicked */
+canvas {
+  border: 2px solid #000;
+  cursor: crosshair;
+   background-image: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8F00FF);
+  background-size: 100% 100%;
+  background-attachment: fixed; 
+}
+
+#controls {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
 }
